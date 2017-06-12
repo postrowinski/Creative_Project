@@ -418,13 +418,13 @@ p {
       
     .bg-1, 
     .bg-2 {
-        background: url('/img/news-1.png') center center no-repeat;
+        background: url('img/news-1.png') center center no-repeat;
         background-size: cover;
         min-height: 420px;
     }
     
     .bg-2 {
-        background: url('/img/news-2.png') center center no-repeat;
+        background: url('img/news-2.png') center center no-repeat;
         background-size: cover;
     } 
 }
@@ -466,7 +466,7 @@ p {
 /* FEATURE */
 
 .feature {
-    background: url('/img/Feature-bg.png') center center no-repeat fixed;
+    background: url('img/Feature-bg.png') center center no-repeat fixed;
     background-size: cover;
     padding: 8rem 0;
     
@@ -571,7 +571,7 @@ p {
 /* CONTACT */
 
 .contact {
-    background: url('/img/contact-bg.png') center center fixed no-repeat;
+    background: url('img/contact-bg.png') center center fixed no-repeat;
     background-size: cover;
     padding: 8rem 0 4rem;
     @media #{$phone} {
