@@ -1,2 +1,2 @@
 # photoapp
-Project link: https://postrowinski.github.io/photoapp/
+https://postrowinski.github.io/Creative_Project/
