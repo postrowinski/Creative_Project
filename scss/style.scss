@@ -137,6 +137,25 @@ p {
         background: #fff;
     }
 }
+
+.scroll-top {
+	.fa-arrow-up {
+		width: 4rem;
+		height: 4rem;
+		line-height: 4rem;
+		border-radius: 3px;
+		background: $main-blue;
+		position: fixed;
+		bottom: 1.5rem;
+		right: 1.5rem;
+        color: #fff;
+        text-align: center;
+        font-size: 2rem;
+	}
+    &:hover {
+        cursor: pointer;
+    }
+}
 /* NAV */
 
 .navbar {
@@ -247,6 +266,32 @@ p {
             width: 25px;
         }
     }
+    /* Change navigation collapse from 768px to 992px */
+    @media #{$laptop} {
+        .navbar-header {
+            float: none;
+        }
+        .navbar-toggle {
+            display: block;
+        }
+        .navbar-collapse.collapse {
+            display: none!important;
+        }
+        .navbar-nav {
+            float: none!important;
+            margin: 7.5px -15px;
+        }
+        .navbar-nav>li {
+            float: none;
+        }
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-collapse.collapse.in { 
+            display: block!important;
+        }
+    }
 }
 
 /* JUMBOTRON */
@@ -264,6 +309,9 @@ p {
     
     .motto {
         @include middle-center-align;
+        @media #{$laptop} {
+            @include transform(translateY(0));
+        }
         @media #{$phone} {
             @include transform(translateY(30%));
         }
