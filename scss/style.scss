@@ -64,7 +64,9 @@ body {
 
 a {
     color: #fff;
-    :hover {
+    &:hover,
+    &:active,
+    &:focus {
         color: #fff;
     }
 }
@@ -304,16 +306,21 @@ p {
     
     .container {
         position: relative; 
-        min-height: 900px;        
+        min-height: 900px;
+        @include transition(min-height 0.5s);
+        @media #{$phone} {
+            min-height: calc(100vh);
+        }
     }
     
     .motto {
+        @include transition(0.4s);
         @include middle-center-align;
         @media #{$laptop} {
             @include transform(translateY(0));
         }
         @media #{$phone} {
-            @include transform(translateY(30%));
+            @include transform(translateY(-50%));
         }
         h1 {
             font-size: 15.3rem;
@@ -338,6 +345,7 @@ p {
             @media #{$laptop} {
                 font-size: 2rem;
                 letter-spacing: 0.3rem;
+                padding-left: 0;
             }
         }
     }

@@ -20,7 +20,7 @@ body {
 
 a {
   color: #fff; }
-  a :hover {
+  a:hover, a:active, a:focus {
     color: #fff; }
 
 h2 {
@@ -225,8 +225,15 @@ p {
   margin-bottom: 0; }
   .jumbotron .container {
     position: relative;
-    min-height: 900px; }
+    min-height: 900px;
+    -webkit-transition: min-height 0.5s;
+    transition: min-height 0.5s; }
+    @media (max-width: 768px) {
+      .jumbotron .container {
+        min-height: calc(100vh); } }
   .jumbotron .motto {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
     position: absolute;
     top: 50%;
     left: 0;
@@ -242,9 +249,9 @@ p {
         transform: translateY(0); } }
     @media (max-width: 768px) {
       .jumbotron .motto {
-        -webkit-transform: translateY(30%);
-        -ms-transform: translateY(30%);
-        transform: translateY(30%); } }
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); } }
     .jumbotron .motto h1 {
       font-size: 15.3rem;
       letter-spacing: -0.3rem;
@@ -266,7 +273,8 @@ p {
       @media (max-width: 991px) {
         .jumbotron .motto h3 {
           font-size: 2rem;
-          letter-spacing: 0.3rem; } }
+          letter-spacing: 0.3rem;
+          padding-left: 0; } }
   .jumbotron .scroll-down-button {
     position: absolute;
     bottom: 8rem;
